@@ -1,6 +1,7 @@
 fastapi==0.109.2
 fitz==0.0.1.dev2
 llama_index==0.10.6
-openai==1.12.0
+llmware==0.1.14
+openai==0.28.0
 python-dotenv==1.0.1
 supabase==2.3.5

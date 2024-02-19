@@ -97,3 +97,79 @@ You will receive a response with the paths to the book and audio summary, along 
 }
 ```
 
+### step 8: Talk with Rag ai Assistant
+
+Send a POST request to http://localhost:80/summary with the following form data:
+
+```json
+{
+    "model": "gpt-4-turbo",
+    "response_format": {"type": "json_object"},
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are helpful Assistant who is knowldgeable about all PDF and their data inside it",
+            "Book_Name": "short-stories-and-other-writings-obooko"
+        },
+        {
+            "role": "user",
+            "content": "Which book is written by madhav chavan?"
+        }
+    ]
+}
+```
+
+With Book_name which u upload have to same name
+
+Content inside role=>"user" to ask any question about and it will give u LLM response with page number realted to text and text realted
+
+```json
+{
+  "user_content": {
+    "status": "success",
+    "message": "Chat completion successful",
+    "model_response": [
+      {
+        "retrieved_chunks": [
+          {
+            "LLM Response": "The text does not provide information on a book written by Madhav Chavan.",
+            "Sources": [
+              {
+                "text": "life Into the essence of instruction or entertainment or Vitality Complications of schemes and the innocence Of nave dreams wedded ",
+                "match_score": 0.3333333333333333,
+                "source": "short-stories-and-other-writings-obooko.pdf",
+                "page_num": "183"
+              }
+            ],
+            "Stats": {
+              "percent_display": "20.0%",
+              "confirmed_words": [
+                "written"
+              ],
+              "unconfirmed_words": [
+                "text",
+                "book",
+                "madhav",
+                "chavan"
+              ],
+              "verified_token_match_ratio": 0.2,
+              "key_point_list": [
+                {
+                  "key_point": "The text does not provide information on a book written by Madhav Chavan.",
+                  "entry": 0,
+                  "verified_match": 0.2
+                }
+              ]
+            },
+            "Not Found Check": {
+              "parse_llm_response": false,
+              "evidence_match": true,
+              "not_found_classification": "undetermined"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+```
