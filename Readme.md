@@ -99,7 +99,7 @@ You will receive a response with the paths to the book and audio summary, along 
 
 ### step 8: Talk with Rag ai Assistant
 
-Send a POST request to http://localhost:80/summary with the following form data:
+Send a POST request to http://127.0.0.1:80/predict with the following form data:
 
 ```json
 {
