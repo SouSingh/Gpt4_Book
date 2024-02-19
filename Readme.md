@@ -132,39 +132,41 @@ Content inside role=>"user" to ask any question about and it will give u LLM res
       {
         "retrieved_chunks": [
           {
-            "LLM Response": "The text does not provide information on a book written by Madhav Chavan.",
+            "LLM Response": "The book \"Tell me now! - 'Good For You'\" is written by Madhav Chavan.",
             "Sources": [
               {
-                "text": "life Into the essence of instruction or entertainment or Vitality Complications of schemes and the innocence Of nave dreams wedded ",
-                "match_score": 0.3333333333333333,
-                "source": "short-stories-and-other-writings-obooko.pdf",
-                "page_num": "183"
+                "text": "This story Tell me now! Good For You is written by Madhav Chavan Pratham Books 2004 Some rights reserved Released ",
+                "match_score": 0.8,
+                "source": "tell-me-now-good-for-you-pratham-FKB.pdf",
+                "page_num": "13"
               }
             ],
             "Stats": {
-              "percent_display": "20.0%",
+              "percent_display": "100.0%",
               "confirmed_words": [
-                "written"
-              ],
-              "unconfirmed_words": [
-                "text",
                 "book",
+                "tell",
+                "now!",
+                "'good",
+                "you'",
+                "written",
                 "madhav",
                 "chavan"
               ],
-              "verified_token_match_ratio": 0.2,
+              "unconfirmed_words": [],
+              "verified_token_match_ratio": 1.0,
               "key_point_list": [
                 {
-                  "key_point": "The text does not provide information on a book written by Madhav Chavan.",
+                  "key_point": "The book \"Tell me now! - 'Good For You'\" is written by Madhav Chavan.",
                   "entry": 0,
-                  "verified_match": 0.2
+                  "verified_match": 1.0
                 }
               ]
             },
             "Not Found Check": {
               "parse_llm_response": false,
               "evidence_match": true,
-              "not_found_classification": "undetermined"
+              "not_found_classification": false
             }
           }
         ]
