@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "voicebooker"
+version = "0.1.0"
+description = ""
+authors = ["SoSaymon <szymon.chirowski@protonmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.2"
+uvicorn = "^0.27.1"
+graphene = "^3.3"
+starlette-graphene3 = "^0.6.0"
+argon2-cffi = "^23.1.0"
+python-dotenv = "^1.0.1"
+sqlalchemy = "^2.0.27"
+pyjwt = "^2.8.0"
+psycopg = {version = "^3.1.13", extras = ["binary", "pool"]}
+python-multipart = "^0.0.9"
+python-magic-bin = "^0.4.14"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

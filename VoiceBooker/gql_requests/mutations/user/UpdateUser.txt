@@ -1,0 +1,8 @@
+mutation updateUser($user_id: Int!, $username: String, $email: String, $password: String, $oldPassword: String, $fullName: String, $active: Boolean) {
+    updateUser(userId: $user_id, username: $username, email: $email, password: $password, oldPassword: $oldPassword, fullName: $fullName, active: $active) {
+        ok
+        user {
+            id
+        }
+    }
+}
